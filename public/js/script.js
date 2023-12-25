@@ -1,8 +1,19 @@
+const overlay = document.getElementById("overlay");
+const nameModal = document.getElementById("modal");
+let playerName = "";
 
-document.addEventListener('DOMContentLoaded', () => {
+  function closeModal() {
+    overlay.style.display = "none";
+    modal.style.display = "none";
+  }
 
-var nameModal = document.getElementById("modal");
-var nameForm = document.getElementById("playeName_form");
-var playerName_input = document.getElementById("playerName");
-var gameContent = document.getElementById("gameContent");
-})
+  const playerName_form = document.getElementById("playerName_form");
+
+  playerName_form.addEventListener("submit", (event) => {
+    event.preventDefault()
+    const playerName_input = document.getElementById("playerName");
+    playerName = playerName_input.value;
+    closeModal();
+  });
+  
+

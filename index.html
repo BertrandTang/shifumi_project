@@ -1,32 +1,41 @@
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/reset.css">
-    <link rel="stylesheet" href="/public/css/index.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/css/reset.css" />
+    <link rel="stylesheet" href="/public/css/index.css" />
     <title>Cailloux, Pétal, Pique à glace</title>
 </head>
+
 <body>
     <main>
 
+        <div id="overlay"></div>
+
         <div id="modal">
             <div id="modal_content">
-                <h2>Enter player name</h2>
+                <h2>C'est quoi ton pseudo ?</h2>
                 <form id="playerName_form">
-                    <input type="text" id="playerName" placeholder="Enter your pseudo">
-                    <button type="submit">Valider</button>
+                    <input type="text" id="playerName" placeholder="Cornichon123" required />
+                    <button type="submit" id="submitButton">C'est parti Morty</button>
+                    <div id="output_display"></div>
                 </form>
             </div>
         </div>
 
-        <h1>Le Cailloux, Pétal ou Pique à glace</h1>
-        <div id="buttons">
-            <button class="symbol_button" id="cailloux">Cailloux</button>
-            <button class="symbol_button" id="petal">Pétal</button>
-            <button class="symbol_button" id="pique">Pique à glace</button>
+        <div id="gameContent">
+            <h1>Le Cailloux, Pétal ou Pique à glace</h1>
+            <div id="buttons">
+                <button class="symbol_button" id="cailloux">Cailloux</button>
+                <button class="symbol_button" id="petal">Pétal</button>
+                <button class="symbol_button" id="pique">Pique à glace</button>
+            </div>
         </div>
+
     </main>
     <footer>Tous droits réservés à Bertrand Tang copyright © 2023</footer>
 </body>
 <script src="public/js/script.js"></script>
+
 </html>
