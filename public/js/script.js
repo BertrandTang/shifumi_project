@@ -6,6 +6,10 @@ let playerScoreDisplay = document.getElementById("playerScoreDisplay");
 let playerScore=0;
 let robotScoreDisplay = document.getElementById("robotScoreDisplay");
 let robotScore=0;
+let sparScoreDisplay = document.getElementById("sparScoreDisplay");
+let sparScore=0;
+let roundsPlayedDisplay = document.getElementById("roundsPlayedDisplay");
+let roundsPlayed=0;
 
 function closeModal() {
   overlay.style.display = "none";
@@ -31,17 +35,25 @@ cailloux.addEventListener("click", () => {
 
   switch (robotPossibleOutput[randomOutput]) {
     case "cailloux":
-    outputDisplay_game.innerText = `Robot a joué cailloux commme ${playerName}, égalité !`;
+    outputDisplay_game.innerHTML = `<span>Robot</span> a joué cailloux commme <em>${playerName}</em>, <strong>égalité</strong> !`;
+    sparScore++;
+    sparScoreDisplay.innerHTML = `Égalité = ${sparScore}`;
+    roundsPlayed++;
+    roundsPlayedDisplay.innerHTML = `Parties jouées = ${roundsPlayed}`;
       break;
     case "petal":
-      outputDisplay_game.innerText = `Robot a joué pétal, ${playerName} a perdu !`;
+      outputDisplay_game.innerHTML = `<span>Robot</span> a joué pétal, <em>${playerName}</em> a <strong>perdu</strong> !`;
       robotScore++; 
-      robotScoreDisplay.innerText = `Le score de Robot est de ${robotScore}`;
+      robotScoreDisplay.innerHTML = `Le score de <span>Robot</span> est de <span>${robotScore}</span>`;
+      roundsPlayed++;
+    roundsPlayedDisplay.innerHTML = `Parties jouées = ${roundsPlayed}`;
       break;
     case "pique":
-      outputDisplay_game.innerText = `Robot a joué pique à glace, ${playerName} a gagné !`;
+      outputDisplay_game.innerHTML = `<span>Robot</span> a joué pique à glace, <em>${playerName}</em> a <strong>gagné</strong> !`;
       playerScore++; 
-      playerScoreDisplay.innerText = `Votre score est de ${playerScore}`;
+      playerScoreDisplay.innerHTML = `Votre score est de <em>${playerScore}</em>`;
+      roundsPlayed++;
+    roundsPlayedDisplay.innerHTML = `Parties jouées = ${roundsPlayed}`;
       break;
   }
 });
@@ -52,17 +64,25 @@ petal.addEventListener("click", () => {
 
   switch (robotPossibleOutput[randomOutput]) {
     case "cailloux":
-      outputDisplay_game.innerText = `Robot a joué cailloux, ${playerName} a gagné !`;
+      outputDisplay_game.innerHTML = `<span>Robot</span> a joué cailloux, <em>${playerName}</em> a <strong>gagné</strong> !`;
       playerScore++; 
-      playerScoreDisplay.innerText = `Votre score est de ${playerScore}`;
+      playerScoreDisplay.innerHTML = `Votre score est de <em>${playerScore}</em>`;
+      roundsPlayed++;
+    roundsPlayedDisplay.innerHTML = `Parties jouées = ${roundsPlayed}`;
       break;
     case "petal":
-      outputDisplay_game.innerText = `Robot a joué pétal commme ${playerName}, égalité !`;
+      outputDisplay_game.innerHTML = `<span>Robot</span> a joué pétal commme <em>${playerName}</em>, <strong>égalité</strong> !`;
+      sparScore++;
+      sparScoreDisplay.innerHTML = `Égalité = ${sparScore}`;
+      roundsPlayed++;
+    roundsPlayedDisplay.innerHTML = `Parties jouées = ${roundsPlayed}`;
       break;
     case "pique":
-      outputDisplay_game.innerText = `Robot a joué pique à glace, ${playerName} a perdu !`;
+      outputDisplay_game.innerHTML = `<span>Robot</span> a joué pique à glace, <em>${playerName}</em> a <strong>perdu</strong> !`;
       robotScore++; 
-      robotScoreDisplay.innerText = `Le score de Robot est de ${robotScore}`;
+      robotScoreDisplay.innerHTML = `Le score de <span>Robot</span> est de <span>${robotScore}</span>`;
+      roundsPlayed++;
+    roundsPlayedDisplay.innerHTML = `Parties jouées = ${roundsPlayed}`;
       break;
   }
 });
@@ -73,17 +93,25 @@ pique.addEventListener("click", () => {
 
   switch (robotPossibleOutput[randomOutput]) {
     case "cailloux":
-      outputDisplay_game.innerText = `Robot a joué cailloux, ${playerName} a perdu !`;
+      outputDisplay_game.innerHTML = `<span>Robot</span> a joué cailloux, <em>${playerName}</em> a <strong>perdu</strong> !`;
       robotScore++; 
-      robotScoreDisplay.innerText = `Le score de Robot est de ${robotScore}`;
+      robotScoreDisplay.innerHTML = `Le score de <span>Robot</span> est de <span>${robotScore}</span>`;
+      roundsPlayed++;
+    roundsPlayedDisplay.innerHTML = `Parties jouées = ${roundsPlayed}`;
       break;
     case "petal":
-      outputDisplay_game.innerText = `Robot a joué pétal, ${playerName} a gagné !`;
+      outputDisplay_game.innerHTML = `<span>Robot</span> a joué pétal, <em>${playerName}</em> a <strong>gagné</strong> !`;
       playerScore++; 
-      playerScoreDisplay.innerText = `Votre score est de ${playerScore}`;
+      playerScoreDisplay.innerHTML = `Votre score est de <em>${playerScore}</em>`;
+      roundsPlayed++;
+    roundsPlayedDisplay.innerHTML = `Parties jouées = ${roundsPlayed}`;
       break;
     case "pique":
-      outputDisplay_game.innerText = `Robot a joué pique à glace commme ${playerName}, égalité !`;
+      outputDisplay_game.innerHTML = `<span>Robot</span> a joué pique à glace commme <em>${playerName}</em>, <strong>égalité</strong> !`;
+      sparScore++;
+      sparScoreDisplay.innerHTML = `Égalité = ${sparScore}`;
+      roundsPlayed++;
+    roundsPlayedDisplay.innerHTML = `Parties jouées = ${roundsPlayed}`;
       break;
   }
 });

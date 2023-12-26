@@ -6,6 +6,10 @@
     font-family: 'Esteban', serif;
 }
 
+body{
+    background-color: #eac2ea;
+}
+
 #overlay {
     display: block;
     position: fixed;
@@ -61,7 +65,26 @@ button[type="submit"]{
     border: none;
     color: #9d64d7;
 }
+h1 {
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color: #c861c8;
+}
 
+#buttons_list{
+    display: flex;
+    justify-content: center;
+}
+
+.symbol_button{
+    padding: 1rem;
+    font-size: 3.5rem;
+    margin: 0.5rem;
+    border-radius: 100%;
+    border: none;
+}
 
 span{
     color: #9d64d7;
@@ -69,4 +92,16 @@ span{
 
 em{
     color: #df8c70;
+}
+
+strong{
+    color: #d06982;
+}
+
+
+footer{
+    padding: 2rem;
+    text-align: center;
+    font-family: 'Esteban', serif;
+    color: #c861c8;
 }
