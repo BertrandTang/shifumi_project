@@ -19,20 +19,21 @@
                 <form id="playerName_form">
                     <input type="text" id="playerName" placeholder="Cornichon123" required />
                     <button type="submit" id="submitButton">C'est parti Morty</button>
-                    <div id="output_display"></div>
+                    <div id="outputDisplay_form"></div>
                 </form>
             </div>
         </div>
 
         <div id="gameContent">
             <h1>Le Cailloux, Pétal ou Pique à glace</h1>
-            <div id="buttons">
-                <ul>
-                    <li><button class="symbol_button" id="cailloux">Cailloux</button></li>
-                    <li><button class="symbol_button" id="petal">Pétal</button></li>
-                    <button class="symbol_button" id="pique">Pique à glace</button>
+                <ul id="buttons_list">
+                    <li><button class="symbol_button" id="cailloux">🪨</button></li>
+                    <li><button class="symbol_button" id="petal">🥀</button></li>
+                    <li><button class="symbol_button" id="pique">🪛</button></li>
                 </ul>
-            </div>
+                <div id="outputDisplay_game"></div>
+                <div id="playerScoreDisplay"></div>
+                <div id="robotScoreDisplay"></div>
         </div>
 
     </main>

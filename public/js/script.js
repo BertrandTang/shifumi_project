@@ -2,6 +2,10 @@ const overlay = document.getElementById("overlay");
 const nameModal = document.getElementById("modal");
 let playerName = "";
 let outputDisplay_game = document.getElementById("outputDisplay_game");
+let playerScoreDisplay = document.getElementById("playerScoreDisplay");
+let playerScore=0;
+let robotScoreDisplay = document.getElementById("robotScoreDisplay");
+let robotScore=0;
 
 function closeModal() {
   overlay.style.display = "none";
@@ -27,13 +31,17 @@ cailloux.addEventListener("click", () => {
 
   switch (robotPossibleOutput[randomOutput]) {
     case "cailloux":
-      console.log(`Robot a joué cailloux commme ${playerName}, égalité !`);
+    outputDisplay_game.innerText = `Robot a joué cailloux commme ${playerName}, égalité !`;
       break;
     case "petal":
-      console.log(`Robot a joué pétal, ${playerName} a perdu !`);
+      outputDisplay_game.innerText = `Robot a joué pétal, ${playerName} a perdu !`;
+      robotScore++; 
+      robotScoreDisplay.innerText = `Le score de Robot est de ${robotScore}`;
       break;
     case "pique":
-      console.log(`Robot a joué pique à glace, ${playerName} a gagné !`);
+      outputDisplay_game.innerText = `Robot a joué pique à glace, ${playerName} a gagné !`;
+      playerScore++; 
+      playerScoreDisplay.innerText = `Votre score est de ${playerScore}`;
       break;
   }
 });
@@ -44,13 +52,17 @@ petal.addEventListener("click", () => {
 
   switch (robotPossibleOutput[randomOutput]) {
     case "cailloux":
-      console.log(`Robot a joué cailloux, ${playerName} a gagné !`);
+      outputDisplay_game.innerText = `Robot a joué cailloux, ${playerName} a gagné !`;
+      playerScore++; 
+      playerScoreDisplay.innerText = `Votre score est de ${playerScore}`;
       break;
     case "petal":
-      console.log(`Robot a joué pétal commme ${playerName}, égalité !`);
+      outputDisplay_game.innerText = `Robot a joué pétal commme ${playerName}, égalité !`;
       break;
     case "pique":
-      console.log(`Robot a joué pique à glace, ${playerName} a perdu !`);
+      outputDisplay_game.innerText = `Robot a joué pique à glace, ${playerName} a perdu !`;
+      robotScore++; 
+      robotScoreDisplay.innerText = `Le score de Robot est de ${robotScore}`;
       break;
   }
 });
@@ -61,13 +73,17 @@ pique.addEventListener("click", () => {
 
   switch (robotPossibleOutput[randomOutput]) {
     case "cailloux":
-      console.log(`Robot a joué cailloux, ${playerName} a perdu !`);
+      outputDisplay_game.innerText = `Robot a joué cailloux, ${playerName} a perdu !`;
+      robotScore++; 
+      robotScoreDisplay.innerText = `Le score de Robot est de ${robotScore}`;
       break;
     case "petal":
-      console.log(`Robot a joué pétal, ${playerName} a gagné !`);
+      outputDisplay_game.innerText = `Robot a joué pétal, ${playerName} a gagné !`;
+      playerScore++; 
+      playerScoreDisplay.innerText = `Votre score est de ${playerScore}`;
       break;
     case "pique":
-      console.log(`Robot a joué pique à glace comme ${playerName}, égalité !`);
+      outputDisplay_game.innerText = `Robot a joué pique à glace commme ${playerName}, égalité !`;
       break;
   }
 });
