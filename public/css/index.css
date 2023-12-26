@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Esteban&display=swap');
 
 
-*{
+* {
     box-sizing: border-box;
     font-family: 'Esteban', serif;
 }
 
-body{
+body {
     background-color: #eac2ea;
 }
 
@@ -36,19 +36,19 @@ body{
     width: 20rem;
 }
 
-#modal_content{
+#modal_content {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-h2{
+h2 {
     color: #df8c70;
     font-size: 1.7rem;
     margin-bottom: 1.5rem;
 }
 
-input[type="text"]{
+input[type="text"] {
     color: #df8c70;
     font-size: 1.3rem;
     margin-bottom: 1.5rem;
@@ -58,13 +58,14 @@ input[type="text"]{
     border: none;
 }
 
-button[type="submit"]{
+button[type="submit"] {
     font-size: 1rem;
     padding: 1rem;
     border-radius: 60px;
     border: none;
     color: #9d64d7;
 }
+
 h1 {
     text-align: center;
     padding: 1rem;
@@ -73,33 +74,92 @@ h1 {
     color: #c861c8;
 }
 
-#buttons_list{
+#buttons_list {
     display: flex;
     justify-content: center;
+    margin-bottom: 1.5rem;
 }
 
-.symbol_button{
-    padding: 1rem;
+.symbol_button {
+    padding: 1.3rem;
     font-size: 3.5rem;
     margin: 0.5rem;
     border-radius: 100%;
     border: none;
+    cursor: pointer;
 }
 
-span{
+.symbol_button:hover {
+    border-radius: 100%;
+    transform: translateY(-10px);
+    box-shadow: 0 7px 0 -2px #f85959,
+     0 15px 0 -4px #39a2db,
+     0 16px 10px -3px #39a2db;
+   }
+   
+   .symbol_button:active {
+    transition: all 0.2s;
+    transform: translateY(-5px);
+    box-shadow: 0 2px 0 -2px #f85959,
+     0 8px 0 -4px #39a2db,
+     0 12px 10px -3px #39a2db;
+   }
+
+span {
     color: #9d64d7;
 }
 
-em{
+em {
     color: #df8c70;
 }
 
-strong{
+strong {
     color: #d06982;
 }
 
+#displays_list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
 
-footer{
+#displays_list li{
+    font-size: 1rem;
+    line-height: 2rem;
+    text-align: center;
+    width: 100%;
+    padding: 1.4rem;
+    margin-bottom:1rem ;
+    border: 2.5px solid #c861c8;
+    border-radius: 60px;
+}
+
+/* #outputDisplay_game {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: center;
+    width: 100%;
+    padding: 1.4rem;
+    margin-bottom:1rem ;
+    border: 5px solid #c861c8;
+    border-radius: 60px;
+} */
+
+/* #playerScoreDisplay, 
+#robotScoreDisplay, 
+#sparScoreDisplay,
+#roundsPlayedDisplay{
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 60px;
+    margin: 0.5rem;
+    width: 100%;
+} */
+
+footer {
     padding: 2rem;
     text-align: center;
     font-family: 'Esteban', serif;
